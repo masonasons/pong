@@ -1,0 +1,100 @@
+New in 5.0
+Open sourced.
+Converted to new framework.
+
+New in 4.0
+Play option is unavailable if default char is unset.
+Code is now cythonized, which means release! Woot!
+
+New in 4.0 Pre9
+No longer able to move in autopilot.
+
+New in 4.0 Pre8
+The AI now selects a random character to use for taunts and things.
+
+New in 4.0 Pre7
+If an invisiball hits a shield, it no longer reappears.
+AI no longer knows where the invisiball is. Instead, he runs around frantically and if he hits it, it's by chance.
+Hopefully fixes a bug in which the AI loses and then gets stuck trying to serve.
+Decreases ball's maximum speed, making the game a bit more possible later on in the match.
+Slows down computer a bit, making it so hopefully he'll lose a bit more likely.
+Adds autopilot!
+Fixes a bug which would cause the ball to fly off the board in some cases, rendering the rest of that game completely unplayable, as amusing as that was sometimes. This usually happened when an AI had a shield and the ball hit the shield and then the AI managed to hit it, causing it to somehow go back in the other direction. Yeah that was broken.
+Adds remaining difficulty levels from SWPong 3.2.
+Fixes a problem where on some machines, the game would run at a very low frame rate and cause huge CPU usage
+
+New in 4.0 Pre6
+Fixes a bug which would cause the shield loop to play multiple times at the same time and not stop for the duration of the game.
+The game music now loops as intended.
+
+New in 4.0 Pre5
+Fixes crowd.
+The ball no longer goes in a straight line by default.
+Fixes bugs
+Adds game music, and page up and down keys to change it's volume.
+
+New in 4.0 Pre4
+Adds characters.
+Adds croud banter as the game intensifies.
+
+New in 4.0 Pre3
+Adds the invisiball
+Adds shields.
+
+New in 4.0 Pre2
+Performance improvements
+You can now win and lose the game.
+
+New in 4.0 Pre1
+Rewrite started in Python using the Lucia audiogame kit.
+
+New in 3.2
+Fixes to readme.
+new in 3.2B2
+Fixed readme.
+Added version variable.
+Experimentally lowered computer move speed to try and make it easier.
+Disabled wrapping in menus.
+Enabled home and end for menus.
+Updated menu class so it saves music volume.
+new in 3.2B1
+Made some menu options fade the music like they should.
+sound overhall.
+New in 3.1
+Added you can make your own characters.
+Added new logo
+New in 3.0
+Did some code splitting, nothing you'd notice.
+Recoded save files. Old save files will not be compatible, and save files are no longer protected from using on specific machines.
+Made it so if you didn't select a character, it will ask you once you start a game for one.
+Added classic mode.
+Lowered chance of computer getting shields.
+Changed to the new menu class.
+new in 2.2
+Did some behind the scenes stuff with cheats and save files.
+new in 2.1
+Made it possible to unlock cheats. Play and win a game on longest.
+Added new character.
+Updated to new logo
+Updated to the newer menu toolkit class. You shouldn't notice a difference, but it improves scrolling menus and adds numbers to menus.
+made cheats more ... dynamic.
+fixed a bug where if you hit enter on game start, logo fades but is not stopping when game loads
+added more cheats
+changed cheats thingy.
+new in 2.0
+added a new surprise game mode!
+added cheats.
+for sure, fixed the ball getting stuck bug.
+changed it so the ball's pitch is lower when your oponent is getting the ball, and it's higher when you are getting the ball. So, like if you just hit the ball, the pitch would lower. Then, he hits, and the pitch gets higher so you know to serve.
+fixed a whole bunch of bugs with resetting the game. This will make the gameplay a lot nicer in between games.
+fixed that if the oponent's shield gets hit, the ball would not return.
+removed announcer.
+Completely rewrote the characters code. Now you can press enter to skip the taunts, and there's new characters!
+Fixed a helarious bug, when you clicked load game, played a game, then clicked new game, it wouldn't work right.
+Made saving and loading saved games not buggy, and encrypted the save file (thanks to NS studios)
+tried to make things a bit more random. Things can happen more often now, such as inviziballs and shields.
+added a few more things to the save file
+added a final statistics menu.
+added new lengths, shortest=6, and longest=26
+changed it to side scrolling menu now.
+Added the computer can serve as well as you. it starts off you serve, then comp serves, then you serve, etc.
