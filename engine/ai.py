@@ -1,6 +1,6 @@
 import random
 from . import prefs, player
-from lucia.utils import rotation
+from . import rotation
 from framework import timer
 class ai(object):
 	def __init__(self):

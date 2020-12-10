@@ -1,7 +1,6 @@
 import synthizer
-import lucia
 import random
-from . import ai, ball, player, prefs, var
+from . import ai, ball, player, prefs, rotation, var
 from framework import framework
 import pygame
 import time
@@ -178,7 +177,7 @@ def game(mode, length,gm):
 			if framework.key_pressed(pygame.K_UP):
 				if prefs.g.serving==True and prefs.g.server==1:
 					prefs.b.serve(prefs.me.x,prefs.me.y)
-				elif prefs.g.turn==1 and lucia.utils.rotation.get_2d_distance(prefs.me.x,prefs.me.y,prefs.b.x,prefs.b.y)<=5 and prefs.g.serving==False:
+				elif prefs.g.turn==1 and rotation.get_2d_distance(prefs.me.x,prefs.me.y,prefs.b.x,prefs.b.y)<=5 and prefs.g.serving==False:
 					prefs.b.hit(prefs.me.y,prefs.me.x)
 			if framework.key_pressed(pygame.K_LEFT):
 				prefs.me.move(1)
