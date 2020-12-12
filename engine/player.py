@@ -1,6 +1,6 @@
 import lucia
 import random
-from . import prefs
+from . import prefs, rotation
 from framework import timer
 class player(object):
 	def __init__(self):
@@ -62,7 +62,7 @@ class player(object):
 							self.move(1)
 						elif self.x<prefs.b.x:
 							self.move(2)
-					if lucia.utils.rotation.get_2d_distance(self.x,self.y,prefs.b.x,prefs.b.y)<=5:
+					if rotation.get_2d_distance(self.x,self.y,prefs.b.x,prefs.b.y)<=5:
 						prefs.b.hit(self.y,self.x)
 						prefs.g.turn=2
 		if self.shielded==True and self.shieldtimer.elapsed>=self.shieldtime:
