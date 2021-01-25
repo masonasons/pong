@@ -1,6 +1,6 @@
 import random
 from . import prefs
-from framework import framework
+from framework3d import framework
 class ball(object):
 	def __init__(self):
 		self.x=0

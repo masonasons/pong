@@ -1,7 +1,7 @@
 import lucia
 import random
 from . import prefs, rotation
-from framework import timer
+from framework3d import timer
 class player(object):
 	def __init__(self):
 		self.x=10

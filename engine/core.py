@@ -1,7 +1,7 @@
 import synthizer
 import random
 from . import ai, ball, player, prefs, rotation, var
-from framework import framework
+from framework3d import framework
 import pygame
 import time
 import sys
@@ -128,7 +128,6 @@ def game(mode, length,gm):
 	prefs.p3d.internal_reverb.gain=0.3
 	prefs.p3d.internal_reverb.mean_free_path=0.07
 	prefs.p3d.internal_reverb.t60=0.8
-	prefs.p3d.internal_reverb.input_filter_cutoff=22050
 	cl=prefs.p3d.play_stationary("sounds/crowd/loop.flac",True)
 	prefs.p3d.update_volume(cl,-15)
 	prefs.g=var.var()

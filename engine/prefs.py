@@ -1,5 +1,5 @@
 import random
-from framework import framework
+from framework3d import framework
 global p
 p=None
 global p3d
