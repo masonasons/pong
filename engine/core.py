@@ -17,6 +17,7 @@ if not os.path.exists(savepath):
 	os.makedirs(savepath)
 
 prefs.p3d=framework.sound_manager()
+prefs.p3d.hrtf=True
 prefs.g=None
 prefs.b=None
 prefs.comp=None
