@@ -1,7 +1,6 @@
 import random
 from . import prefs, player
-from . import rotation
-from framework3d import timer
+from framework3d import rotation, timer
 class ai(object):
 	def __init__(self):
 		self.ax=10

@@ -115,7 +115,7 @@ class ball(object):
 			elif self.dir==4 and self.y>=0:
 				self.y-=1
 			if self.invisible==False:
-				prefs.p3d.update_2d(self.snd,self.x,self.y)
+				self.snd.update((self.x,self.y,0))
 			if prefs.g.turn==2 and self.y>=20:
 				if prefs.comp.shielded==False:
 					self.destroy()

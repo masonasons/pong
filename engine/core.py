@@ -1,7 +1,7 @@
 import synthizer
 import random
-from . import ai, ball, player, prefs, rotation, var
-from framework3d import framework
+from . import ai, ball, player, prefs, var
+from framework3d import framework, rotation
 import pygame
 import time
 import sys
@@ -17,6 +17,7 @@ if not os.path.exists(savepath):
 	os.makedirs(savepath)
 
 prefs.p3d=framework.sound_manager()
+prefs.p3d.max_distance=30
 prefs.p3d.hrtf=True
 prefs.g=None
 prefs.b=None
@@ -123,14 +124,13 @@ def apmenu():
 
 def game(mode, length,gm):
 	reset()
-	prefs.p3d.context.distance_max=30
 	prefs.p3d.z=4
 #	prefs.p3d.context.distance_model=prefs.p3d.context.distance_model.INVERSE
 	prefs.p3d.internal_reverb.gain=0.3
 	prefs.p3d.internal_reverb.mean_free_path=0.07
 	prefs.p3d.internal_reverb.t60=0.8
 	cl=prefs.p3d.play_stationary("sounds/crowd/loop.flac",True)
-	prefs.p3d.update_volume(cl,-15)
+	cl.volume=-15
 	prefs.g=var.var()
 	prefs.b=ball.ball()
 	prefs.comp=ai.ai()
@@ -141,7 +141,7 @@ def game(mode, length,gm):
 	prefs.g.ap=gm
 	prefs.p3d.reverb=True
 	music=prefs.p3d.play_stationary("sounds/music/InGame.flac",True,False)
-	prefs.p3d.update_volume(music,-30)
+	music.volume=-30
 	prefs.me.randx=random.randint(1,20)
 	prefs.p3d.play_2d("sounds/chars/"+prefs.comp.voice+"/start.flac",prefs.comp.x,prefs.comp.y,False)
 	framework.dlg_play("sounds/chars/"+prefs.pref.voice+"/start.flac","sound3d",context=prefs.p3d.context)
@@ -152,9 +152,9 @@ def game(mode, length,gm):
 		prefs.me.loop()
 		prefs.comp.loop()
 		if framework.key_pressed(pygame.K_PAGEUP):
-			prefs.p3d.get_item(music).handle.volume+=2
+			music.handle.volume+=2
 		if framework.key_pressed(pygame.K_PAGEDOWN):
-			prefs.p3d.get_item(music).handle.volume-=2
+			music.handle.volume-=2
 		if prefs.g.yourscore>=prefs.g.length:
 			prefs.p3d.play_2d("sounds/chars/"+prefs.comp.voice+"/lose.flac",prefs.comp.x,prefs.comp.y,False)
 			framework.dlg_play("sounds/chars/"+prefs.pref.voice+"/win.flac","sound3d",False,context=prefs.p3d.context)
